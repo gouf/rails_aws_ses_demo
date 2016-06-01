@@ -13,3 +13,5 @@
       = text_area_tag 'Body', '', class: 'form-control', rows: 10, placeholder: 'Message body'
     .form-group
       = button_tag 'submit', class: 'btn btn-primary btn-lg'
+    .form-group
+      = link_to('back', mail_sends_path, class: 'btn btn-default')
