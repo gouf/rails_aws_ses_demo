@@ -3,4 +3,7 @@ class MailSendsController < ApplicationController
     @sent_mails = []
     @queued_mails = []
   end
+
+  def new
+  end
 end

@@ -1,0 +1,14 @@
+.container
+  h1 Create Sending Mail
+
+  = form_tag(mail_sends_confirm_path) do
+    .form-group
+      = label_tag 'Subject'
+      = text_field_tag 'Subject', '', class: 'form-control', placeholder: 'subject'
+    .form-group
+      = label_tag 'To'
+      = text_field_tag 'To', '', class: 'form-control', placeholder: 'example@example.com'
+    .form-group
+      = label_tag 'Body'
+      = text_area_tag 'Body', '', class: 'form-control', rows: 10, placeholder: 'Message body'
+    = button_tag 'submit', class: 'btn btn-primary'
