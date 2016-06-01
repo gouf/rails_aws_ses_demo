@@ -12,4 +12,8 @@ class MailSendsController < ApplicationController
     @to = params[:To]
     @body = params[:Body]
   end
+
+  def create
+    # TODO: send an email using by Amazon SES
+  end
 end
