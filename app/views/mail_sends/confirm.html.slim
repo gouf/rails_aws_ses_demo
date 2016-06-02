@@ -4,13 +4,13 @@
   = form_tag(mail_sends_path) do
     .form-group
       = label_tag 'Subject'
-      = text_field_tag 'Subject', @subject, class: 'form-control', disabled: true
+      = text_field_tag 'Subject', @subject, class: 'form-control', readonly: true
     .form-group
       = label_tag 'To'
-      = text_field_tag 'To', @to, class: 'form-control', disabled: true
+      = text_field_tag 'To', @to, class: 'form-control', readonly: true
     .form-group
       = label_tag 'Body'
-      = text_area_tag 'Body', @body, class: 'form-control', rows: 10, disabled: true
+      = text_area_tag 'Body', @body, class: 'form-control', rows: 10, readonly: true
     .form-group
       = button_tag 'submit', class: 'btn btn-primary btn-lg'
     .form-group
