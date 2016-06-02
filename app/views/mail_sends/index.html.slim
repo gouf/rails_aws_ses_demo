@@ -1,0 +1,9 @@
+h1 Hello
+
+h1 Mail Sent History
+- @sent_mails.each do |m|
+
+h1 Pending Send Mails
+- @queued_mails.each do |q|
+
+= link_to('Create an Email', new_mail_send_path)
