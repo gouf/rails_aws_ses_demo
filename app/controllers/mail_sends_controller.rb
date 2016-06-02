@@ -14,6 +14,17 @@ class MailSendsController < ApplicationController
   end
 
   def create
-    # TODO: send an email using by Amazon SES
+    send_email(subject: params[:Subject], to: params[:To], body: params[:Body])
+  end
+
+  private
+
+  def send_email(subject:, to:, body:)
+    secrets = Rails.application.secrets.select { |key, _value| key.to_s.include?('aws') }
+    ses = Mail::SesClient.new(
+      access_key_id: secrets[:aws_access_key_id],
+      secret_access_key: secrets[:aws_secret_access_key]
+    )
+    ses.send(subject: subject, to: to, body: body)
   end
 end
