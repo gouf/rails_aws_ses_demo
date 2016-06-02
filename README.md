@@ -1,28 +1,24 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails AWS SES Demo
 
 Things you may want to cover:
 
-* Ruby version
+* Aamazon SES verified domain or email address
 
-* System dependencies
+  rewrite `lib/mail/ses_client.rb`:L14 mail address
 
-* Configuration
+  * [Verifying Email Addresses and Domains in Amazon SES - Amazon Simple Email Service](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html)
 
-* Database creation
+* AWS access key and secret accesse key
 
-* Database initialization
+  Set as:
 
-* How to run the test suite
+  ```sh
+  export AWS_ACCESS_KEY_ID=Your_Aws_Access_Key_ID
+  export AWS_SECRET_ACCESS_KEY=Your_Aws_Secret_Access_Key
+  ```
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby version : 2.3.1
 
-* Deployment instructions
+* Up and Run : `rails s`
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Accesse to: 'http://localhost:3000/mail_sends'
